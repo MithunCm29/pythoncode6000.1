@@ -4,3 +4,799 @@ pi=3.14
 radius=2.2
 area=pi*(radius**2)
 print(area)
+hi="Hello there"
+name="Anna"
+greet=hi+name
+print(greet)
+greeting=hi+" "+name
+print(greeting)
+operated_Greet=hi+ " "+name*3
+print(operated_Greet)
+silly=hi+ (" "+name)*3
+print(silly)
+x=1
+print(x)
+print(type(x))
+x_string=str(x)
+print(type(x_string))
+print("My fav number is ",x, ".","x=",x)
+print("My fav number is "+" "+x_string+" "+"."+" "+"x="+" "+x_string)
+text=input("Type anything..............")
+print(5*text)
+number=int(input("Please type a number...."))
+print(5*number)
+x=float(input("Type a number for X......"))
+y=float(input("Type another number for Y........."))
+if x==y:
+  print("X is equal to Y")
+  if y!=0:
+    print("Therefore x/y is", x/y)
+elif x>y:
+  print("Y is smaller")
+else:
+  print("X is smalller")
+n=input("Your are in lost forest. Go left or right")
+while n=="right":
+  n=input("Your are in lost forest. go left or right")
+print("You go out of lost fore")
+#slicing in python
+s="abcdefgh"
+length=len(s)
+print(s[::])
+print(s[3:6])
+print(s[1:len(s):2])
+print(s[-1::])
+print(s[-1:-len(s):1])
+mysum=0
+for i in range(7,10,2):
+  mysum+=i
+  print(i)
+print(mysum)
+
+
+#Finding The vowel and consonent from a sentence
+k=0
+l=0
+m=0
+text=input("Type a sentence......")
+for i in range(len(text)):
+  if text[i]=='a' or text[i]=='A' or text[i]=='e' or text[i]=='E' or text[i]=='i' or text[i]=='I' or text[i]=='o' or text[i]=='O' or text[i]=='u' or text[i]=='U':
+    vowels[k]=text[i]
+    k=k+1
+  elif text[i]==' ':
+    space[l]=text[i]
+    l=l+1
+  else:
+    a[m]=text[i]
+    m=m+1
+  print("The first part is vowel, the middle part is spaces, the last part is consonent")
+  for i in range(len(vowels)):
+    print(vowels[i])
+    
+    
+  #CheckingForLoopforCharactersAndString
+s="abcdefgh"
+print(s[::-1])
+print(s[-1:-len(s)+1:-1])
+for i in range(len(s)):
+  if s[i]=='a' or s[i]=='e':
+    print("a and e found")
+for char in s:
+  if char=='a' or char == 'e':
+    print("The character a and e is found")
+    
+ 
+ # Code for Robot cheerleader!
+an_letters = "aefhilmnorsxAEFHILMNORSX"
+word=input("I will cheer for you! Enter a word: ")
+times=int(input("Enthusiam level(1-10)!: "))
+i=0
+while i<len(word):
+  char = word[i]
+  if char in an_letters:
+    print("Give me an"+char+ "!"+char)
+  else:
+    print("Give me a" +char+ "!"+char)
+  i=i+1
+print("what does the spell ?")
+for i in range(times):
+  print(word, "!!!")
+  
+  
+ #Guess and check -cube
+cube=int(input("Typing a negative number for checking cuberoot"))
+for guess in range(abs(cube)+1):
+  if guess**3 >= abs(cube):
+    break
+if guess**3 != abs(cube):
+   print(cube, 'is not perfect cube')
+else:
+  if cube < 0:
+    guess=-guess
+    print('cube root ' +str(cube)+ ' is '  +str(guess))
+ 
+ 
+ 
+ # Aproximate solution
+cube=30.0
+guess=0.0
+epsilon=0.01
+increment=0.0001
+num_guesses=0
+while abs(guess**3-cube) >= epsilon:
+  guess+=increment
+  num_guesses+=1
+print("The total number of guesses are", num_guesses)
+if abs(guess**3-cube) >= epsilon:
+  print(" The guess is failed")
+else:
+  print(" The cube root", cube, " is ", guess)
+  
+#Bisection Guess
+cube=27.0
+eplison=0.01
+num_guesses=0
+low=0
+high=cube
+guess=(low+high)/2.0
+while abs(guess**3-cube) >= eplison:
+  if guess**3 > cube:
+    high=guess
+  else:
+    low=guess
+  guess=(low+high)/2.0
+  num_guesses+=1
+print("The number of guess", num_guesses)
+print("The root cube of "+str(cube)+ " is "+str(guess))
+
+
+#Function Writing
+def is_even(i):
+  """ This function returns 
+  outs for even """
+  return i%2==0
+m=int(input("Enter a number to check odd even"))
+if is_even(m)==True:
+  print(" The number is even",m)
+else:
+   print("The number is odd ", m)
+print(is_even.__doc__)
+
+# Function used to print the returns values:
+def is_even(x):
+  print("With return")
+  remainder=x%2
+  return remainder==0
+k=9
+print(is_even(k))
+def ise_even(l):
+  remainder=l%2
+  print("Without returns in Body")
+j=4
+print(ise_even(j))
+
+# Checking Even and Odd between numbers:
+def is_even(x):
+  print("With return")
+  remainder=x%2
+  return remainder==0
+print("The list of number which are even and odd between 0 to 20")
+for i in range(20):
+  if is_even(i):
+    print("Even", i)
+  else:
+    print("Odd", i)
+    
+ #Function AS arguments
+def func_a():
+    print('inside func_a')
+
+def func_b(y):
+    print('inside func_b')
+    return y
+
+def func_c(z):
+    print('inside func_c')
+    return z()
+
+print(func_a())
+print(5+func_b(2))
+print(func_c(func_a))
+
+#Tuples Characterisation checking
+t=(1, "Mit", 3)
+print(t)
+print(type(t))
+print(t[1:2])
+print(t[1:3])
+k=(2, "Hveit")
+j=t+k
+m=(1, "mit", 3)+(2, "Haveit")
+print(m)
+#m[2:3]=j[4:1]
+#Tuples is immutable not able to modified the tuples 
+
+print(j)
+
+
+#Returns geneally single a single object. To return multiple object we formed a tuples which is consider
+#as single object. So using tuples we can returns more than one object 
+#the below quotient and remainder program show it
+def quotient_and_reainder(x, y):
+  q=x//y
+  r=x%y
+  return (q, r)
+(quo, rem)=quotient_and_reainder(8,4)
+print("The quotient is ",quo)
+print("the remainder is ",rem)
+
+#The function defination
+def getdata(aTuple):
+  """
+    aTuple, tuple of tuples (int, string)
+    Extracts all integers from aTuple and sets 
+    them as elements in a new tuple. 
+    Extracts all unique strings from from aTuple 
+    and sets them as elements in a new tuple.
+    Returns a tuple of the minimum integer, the
+    maximum integer, and the number of unique strings
+    """
+  num=()
+  words=()
+  for t in aTuple:
+    num=num+(t[0],)
+    if t[1] not in words:
+      words=words+(t[1],)
+  max_n=max(num)
+  min_n=min(num)
+  unique_words=len(words)
+  return (min_n, max_n, unique_words)
+tswift = ((2014,"Katy"),
+          (2014, "Harry"),
+          (2012,"Jake"), 
+          (2010,"Taylor"), 
+          (2008,"Joe"))    
+(min_year, max_year, num_people) = getdata(tswift)
+print("From", min_year, "to", max_year, \
+        "Taylor Swift wrote songs about", num_people, "people!")
+
+
+#property checking of list
+#list is defined as square parentghesis
+#list is mutable that means modifieable 
+#list of list can performed 
+a_list=[] #empty list
+L=[1, 'a', 4, [1,2]]
+print(len(L))
+print(L[3])
+print(L[3][1])
+L=L+['a',4]
+print(L)
+
+l_1=[1,2,3]
+print(l_1)
+l_2=[4,5,6]
+print(l_2)
+l_3=l_1+l_2
+print(l_3)
+l_1.extend([7,8,9])
+print(l_1)
+l_2.append(10)
+print(l_2)
+#Operations or removed elements from list
+l=[2,1,3,6,3,7,0]
+l.remove(2)
+print(l)
+l.remove(3)
+print(l)
+del(l[1])
+print(l)
+h=l.pop()
+print(h)
+print(l)
+k=l.pop()
+print(k)
+print(l)
+
+
+#Concept of Alias
+worm=["red", "Yellow", "Green"]
+hot=worm
+print("original",worm)
+print("Asssign", hot)
+#changed in assigned value has effect on original
+hot.append("pink")
+print("Assign",hot)
+print("Orginal", worm)
+
+
+
+#checking change in object
+warm=['Yellow', 'Orange']
+print(warm)
+hot=['red']
+print(hot)
+brightcolors=[warm]
+print(brightcolors)
+warm.append("Green")
+print(brightcolors)
+brightcolors.append(hot)
+print(brightcolors)
+hot.append('pink')
+print(brightcolors)
+
+#Deleting Duplicate
+def remove_dup(l1, l2):
+  for e in l1:
+    if e in l2:
+      l1.remove(e)
+l1=[1,2,3,4]
+l2=[1,2,5,6]
+remove_dup(l1, l2)
+print(l1)
+
+
+def remove_dup(l1, l2):
+  l1_same=l1[:]
+  for e in l1_same:
+    if e in l2:
+      l1.remove(e)
+l1=[1,2,3,4]
+l2=[1,2,5,6]
+remove_dup(l1, l2)
+print(l1)
+
+
+#Defining Palindrome solution
+def isPalindrome(s):
+
+    def toChars(s):
+        s = s.lower()
+        ans = ''
+        for c in s:
+            if c in 'abcdefghijklmnopqrstuvwxyz':
+                ans = ans + c
+        return ans
+
+    def isPal(s):
+        if len(s) <= 1:
+            return True
+        else:
+            return s[0] == s[-1] and isPal(s[1:-1])
+
+    return isPal(toChars(s))
+
+#print(isPalindrome('eve'))
+#
+#print(isPalindrome('Able was I, ere I saw Elba'))
+#
+#print(isPalindrome('Is this a palindrome'))
+
+k=input(" type a text to check palindrome: ")
+print(isPalindrome(k))
+
+#Defining PAlndrome
+def Palindrome(s):
+
+  def tochars(s):
+    ans=''
+    s=s.lower()
+    for e in s:
+      if e in 'abcdefghijklmnopqrstuvwxy':
+        ans = ans + e
+    return ans
+  def isPal(s):
+    if len(s) <= 1:
+      return True
+    else:
+      return s[0]==s[-1] and isPal(s[1:-1])
+  return isPal(tochars(s))
+k=input(" type a text to check palindrome: ")
+print(isPalindrome(k))
+
+#Dictonary Defination and charaters!
+grades={ 'Anna':'B', 'John':'A+', 'Denise':'A', 'Katty':'A'}
+print(grades)
+print(grades['Anna'])
+grades['Mithun']='A+'
+grades['Mousumi']='C'
+print(grades)
+print(grades['Mithun'])
+del(grades['Anna'])
+print(grades)
+'Mithun'in grades
+print(grades.keys())
+print(grades.values())
+
+#tOWWER OF hONNAI
+def printMove(fr, to):
+  print("move from " +str(fr) +" to "+str(to) )
+
+def Honai(n ,fr, to, spare):
+  if n==1:
+    printMove(fr, to)
+  else:
+    Honai(n-1, fr, spare, to)
+    Honai(1, fr, to, spare )
+    Honai(n-1, spare, to, fr)
+print(Honai(4, 'P1', 'P2', 'P3'))
+
+try:
+  a=int(input("Enter a number: "))
+  b=int(input("Enter another number :"))
+  print("a/b", a/b)
+  print("a+b: ", a+b)
+except ValueError:
+  print("could not convert to a number ")
+except ZeroDivisionError:
+  print("Cannot divide by zero")
+except:
+  print("Bugs in user input")
+  
+a=int(input("Enter a number: "))
+b=int(input("Enter another number :"))
+print("a/b", a/b)
+print("a+b: ", a+b)
+
+
+#Class AND Object Oriented Python
+class Coordinate(object):
+  def __init__(self, x, y):
+    self.x=x
+    self.y=y
+c=Coordinate(3,4)
+origin=Coordinate(0,0)
+print(c.x);
+print(c.y)
+print(origin.x)
+
+#Python Method call for class
+class coordinate(object):
+  def __init__(self, x, y):
+    self.x=x
+    self.y=y
+  def distance(self, other):
+    x_diff=(self.x-other.x)**2
+    y_diff=(self.y-other.y)**2
+    return (x_diff-y_diff)**0.5
+c=coordinate(5,6)
+y=coordinate(8,10)
+print(c.distance(y))
+print(coordinate.distance(c,y))
+print(c)
+
+
+
+
+class coordinate(object):
+  def __init__(self, x, y):
+    self.x=x
+    self.y=y
+  def distance(self, other):
+    x_diff=(self.x-other.x)**2
+    y_diff=(self.y-other.y)**2
+    return (x_diff-y_diff)**0.5
+  def __str__(self):
+    return "("+str(self.x)+","+str(self.y)+")"
+  def __add__(self, other):
+    x=self.x+other.x
+    y=self.y+other.y
+    return(x,y)
+  def __sub__(self, other):
+    x=self.x-other.x
+    y=self.y-other.y
+    return(x,y)
+c=coordinate(5,6)
+y=coordinate(8,10)
+print(c.distance(y))
+print(coordinate.distance(c,y))
+print(y)
+print(c+y)
+print(c-y)
+
+
+
+#################
+## EXAMPLE: simple class to represent fractions
+## Try adding more built-in operations like multiply, divide
+### Try adding a reduce method to reduce the fraction (use gcd)
+#################
+class Fraction(object):
+    """
+    A number represented as a fraction
+    """
+    def __init__(self, num, denom):
+        """ num and denom are integers """
+        assert type(num) == int and type(denom) == int, "ints not used"
+        self.num = num
+        self.denom = denom
+    def __str__(self):
+        """ Retunrs a string representation of self """
+        return str(self.num) + "/" + str(self.denom)
+    def __add__(self, other):
+        """ Returns a new fraction representing the addition """
+        top = self.num*other.denom + self.denom*other.num
+        bott = self.denom*other.denom
+        return Fraction(top, bott)
+    def __sub__(self, other):
+        """ Returns a new fraction representing the subtraction """
+        top = self.num*other.denom - self.denom*other.num
+        bott = self.denom*other.denom
+        return Fraction(top, bott)
+    def __float__(self):
+        """ Returns a float value of the fraction """
+        return self.num/self.denom
+    def inverse(self):
+        """ Returns a new fraction representing 1/self """
+        return Fraction(self.denom, self.num)
+
+a = Fraction(1,4)
+b = Fraction(3,4)
+c = a + b # c is a Fraction object
+print(c)
+print(float(c))
+print(Fraction.__float__(c))
+print(float(b.inverse()))
+##c = Fraction(3.14, 2.7) # assertion error
+##print a*b # error, did not define how to multiply two Fraction objects
+
+
+#class of object creating
+class animal(object):
+  def __init__(self, age, name):
+    self.age=age
+    self.name=None
+  def get_name(self):
+    return self.name
+  def get_age(self):
+    return self.age
+  def set_age(self, Age):
+    self.age=Age
+  def set_name(self, newname=""):
+    self.name=newname
+  def __str__(self):
+    return "animal "+str(self.name)+": "+str(self.age)
+c1=animal(10,"Mousumi")
+print(c1)
+print(c1.get_name())
+c1.set_name("Mousumi")
+print(c1)
+c1.set_name("Hello")
+print(c1)
+c1.set_age(25)
+print(c1)
+class cat(animal):
+  def speak(self):
+    print("Meow")
+  def __str__(self):
+    return "CAT "+str(self.name)+" : "+str(self.age)
+
+c=animal(10, "Mi")
+c2=cat(10, "h")
+c2.speak()
+c2.set_name("Robi")
+print(c2.get_age())
+print(c2)
+print(c)
+
+
+
+#Inheritance explaine
+class Animal(object):
+    def __init__(self, age):
+        self.age = age
+        self.name = None
+    def get_age(self):
+        return self.age
+    def get_name(self):
+        return self.name
+    def set_age(self, newage):
+        self.age = newage
+    def set_name(self, newname=""):
+        self.name = newname
+    def __str__(self):
+        return "animal:"+str(self.name)+":"+str(self.age)
+        
+print("\n---- animal tests ----")
+a = Animal(4)
+print(a)
+print(a.get_age())
+a.set_name("fluffy")
+print(a)
+a.set_name()
+print(a)
+
+
+class Person(Animal):
+    def __init__(self, name, age):
+        Animal.__init__(self, age)
+        self.set_name(name)
+        self.friends = []
+    def get_friends(self):
+        return self.friends
+    def speak(self):
+        print("hello")
+    def add_friend(self, fname):
+        if fname not in self.friends:
+            self.friends.append(fname)
+    def age_diff(self, other):
+        diff = self.age - other.age
+        print(abs(diff), "year difference")
+    def __str__(self):
+        return "person:"+str(self.name)+":"+str(self.age)
+
+print("\n---- person tests ----")
+p1 = Person("jack", 30)
+p2 = Person("jill", 25)
+print(p1.get_name())
+print(p1.get_age())
+print(p2.get_name())
+print(p2.get_age())
+print(p1)
+p1.speak()
+p1.age_diff(p2)
+
+
+import random
+class Student(Person):
+    def __init__(self, name, age, major=None):
+        Person.__init__(self, name, age)
+        self.major = major
+    def __str__(self):
+        return "student:"+str(self.name)+":"+str(self.age)+":"+str(self.major)
+    def change_major(self, major):
+        self.major = major
+    def speak(self):
+        r = random.random()
+        if r < 0.25:
+            print("i have homework")
+        elif 0.25 <= r < 0.5:
+            print("i need sleep")
+        elif 0.5 <= r < 0.75:
+            print("i should eat")
+        else:
+            print("i am watching tv")
+
+print("\n---- student tests ----")
+s1 = Student('alice', 20, "CS")
+s2 = Student('beth', 18)
+print(s1)
+print(s2)
+print(s1.get_name(),"says:", end=" ")
+s1.speak()
+print(s2.get_name(),"says:", end=" ")
+s2.speak()
+
+
+
+class Rabbit(Animal):
+  tag=1
+  def __init(self, age, parent1=None, parent2=None):
+    Animal.__init__(self, age)
+    self.parent1=parent1
+    self.parent2=parent2
+    self.rid=Rabbit.tag
+    Rabbit.tag+=1
+  def get_rid(self):
+    return str(self.rid)
+        # zfill used to add leading zeroes 001 instead of 1
+        
+r1=Rabbit(10)
+r2=Rabbit(11)
+print(r1.get_rid())
+print(r2.get_rid())
+
+#################################
+## Use of class variables  
+#################################
+class Rabbit(Animal):
+    # a class variable, tag, shared across all instances
+    tag = 1
+    def __init__(self, age, parent1=None, parent2=None):
+        Animal.__init__(self, age)
+        self.parent1 = parent1
+        self.parent2 = parent2
+        self.rid = Rabbit.tag
+        Rabbit.tag += 1
+    def get_rid(self):
+        # zfill used to add leading zeroes 001 instead of 1
+        return str(self.rid).zfill(3)
+    def get_parent1(self):
+        return self.parent1
+    def get_parent2(self):
+        return self.parent2
+    def __add__(self, other):
+        # returning object of same type as this class
+        return Rabbit(0, self, other)
+    def __eq__(self, other):
+        # compare the ids of self and other's parents
+        # don't care about the order of the parents
+        # the backslash tells python I want to break up my line
+        parents_same = self.parent1.rid == other.parent1.rid \
+                       and self.parent2.rid == other.parent2.rid
+        parents_opposite = self.parent2.rid == other.parent1.rid \
+                           and self.parent1.rid == other.parent2.rid
+        return parents_same or parents_opposite
+    def __str__(self):
+        return "rabbit:"+ self.get_rid()
+
+print("\n---- rabbit tests ----")
+print("---- testing creating rabbits ----")
+r1 = Rabbit(3)
+r2 = Rabbit(4)
+r3 = Rabbit(5)
+print("r1:", r1)
+print("r2:", r2)
+print("r3:", r3)
+print("r1 parent1:", r1.get_parent1())
+print("r1 parent2:", r1.get_parent2())
+
+print("---- testing rabbit addition ----")
+r4 = r1+r2   # r1.__add__(r2)
+print("r1:", r1)
+print("r2:", r2)
+print("r4:", r4)
+print("r4 parent1:", r4.get_parent1())
+print("r4 parent2:", r4.get_parent2())
+
+print("---- testing rabbit equality ----")
+r5 = r3+r4
+r6 = r4+r3
+print("r3:", r3)
+print("r4:", r4)
+print("r5:", r5)
+print("r6:", r6)
+print("r5 parent1:", r5.get_parent1())
+print("r5 parent2:", r5.get_parent2())
+print("r6 parent1:", r6.get_parent1())
+print("r6 parent2:", r6.get_parent2())
+print("r5 and r6 have same parents?", r5 == r6)
+print("r4 and r6 have same parents?", r4 == r6)
+
+
+
+#Checking Programming Efficiency
+class Fraction(object):
+    """
+    A number represented as a fraction
+    """
+    def __init__(self, num, denom):
+        """ num and denom are integers """
+        assert type(num) == int and type(denom) == int, "ints not used"
+        self.num = num
+        self.denom = denom
+    def __str__(self):
+        """ Retunrs a string representation of self """
+        return str(self.num) + "/" + str(self.denom)
+    def __add__(self, other):
+        """ Returns a new fraction representing the addition """
+        top = self.num*other.denom + self.denom*other.num
+        bott = self.denom*other.denom
+        return Fraction(top, bott)
+    def __sub__(self, other):
+        """ Returns a new fraction representing the subtraction """
+        top = self.num*other.denom - self.denom*other.num
+        bott = self.denom*other.denom
+        return Fraction(top, bott)
+    def __float__(self):
+        """ Returns a float value of the fraction """
+        return self.num/self.denom
+    def inverse(self):
+        """ Returns a new fraction representing 1/self """
+        return Fraction(self.denom, self.num)
+import time
+t0=time.clock()
+a = Fraction(1,4)
+b = Fraction(3,4)
+c = a + b # c is a Fraction object
+print(c)
+print(float(c))
+print(Fraction.__float__(c))
+print(float(b.inverse()))
+t1=time.clock()-t0
+print("T=",t0, ":",t1)
+##c = Fraction(3.14, 2.7) # assertion error
+##print a*b # error, did not define how to multiply two Fraction objects
+
+
+
